@@ -11,21 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-  $myArray = [
-[
-  'home' => 'UNC',
-  'away' => 'Arkansas',
-  'ptsHome' => 72,
-  'ptsAway' => 65
-],
-[
-  'home' => 'Duke',
-  'away' => 'South Carolina',
-  'ptsHome' => 81,
-  'ptsAway' => 89
-]
-];
-return Response::json($myArray);
+use Illuminate\Http\Request;
 
-});
+Route::get('/players', 'PlayerController@index');
